@@ -1,25 +1,34 @@
 /* CSS */
+
+/* General Styles */
 body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-size: 18px; /* General font size */
+    padding-top: 80px; /* Adjust padding to offset fixed header */
 }
 
 header {
     background-color: #744933b5;
     color: #fff;
-    padding: 10px 0;
+    padding: 5px 0; /* Reduced padding to make the header narrower */
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: fixed; /* Make the header fixed */
+    width: 100%; /* Ensure it spans the full width */
+    top: 0; /* Fix it to the top of the page */
+    z-index: 1000; /* Ensure it stays on top of other elements */
+    height: 70px; /* Set a fixed height for the header */
 }
 
 header .logo {
-    width: 100px; /* Appropriate size for the logo */
+    width: 130px; /* Maintain the logo size */
     height: auto;
-    margin-left: 20px; /* Small margin on the left side */
+    margin-left: 50px; /* Small margin on the left side */
+    margin-top: 80px; /* Add margin to lower the logo */
 }
 
 nav {
@@ -74,6 +83,7 @@ footer {
     bottom: 0;
 }
 
+/* About Section */
 #about {
     text-align: center; /* Center the text */
 }
@@ -101,6 +111,7 @@ footer {
     transition: all 0.3s ease-in-out 0s;
 }
 
+/* Photos Section */
 .photo-row {
     display: flex;
     justify-content: center;
@@ -114,12 +125,14 @@ footer {
     border-radius: 5px;
 }
 
+/* Like Section */
 .like-image {
     display: block;
     margin: 0 auto; /* Center the image */
     max-width: 35%; /* Ensure the image does not exceed its maximum width */
 }
 
+/* Playlist Section */
 .video-row {
     display: flex;
     flex-wrap: wrap;
@@ -139,6 +152,134 @@ footer {
     border: none;
 }
 
+/* QR Code Section */
+.text-image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.text-image-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+.text-image-container p {
+    margin-top: 10px;
+    font-size: 1.25em; /* Adjust as needed */
+}
+
+/* Q&A Section */
+/***********Q&A***********/
+#qa h1 {
+    font-size: 2.5em; /* Font size for main headings */
+    position: relative;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    text-align: center; /* Center the heading */
+}
+
+#qa h1::before {
+    content: "";
+    position: absolute;
+    width: 100%; /* Line width */
+    height: 5px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%); /* Center the line */
+    background-color: #a17639; /* Line color */
+    visibility: visible;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+/* Ensure uniform font size in Q&A section */
+#qa .collapsible p,
+#qa .collapsible .collapsed p {
+    font-size: 1.125em; /* Set font size for paragraphs in Q&A */
+}
+
+.collapsible {
+    display: block;
+    margin-bottom: 1rem;
+}
+.collapsible input {
+    position: fixed;
+    left: -9999px;
+}
+.collapsible .collapser {
+    cursor: pointer;
+    border: 0px;
+}
+.collapsible .arrow {
+    float: right;
+    margin-inline: 0em;
+    display: inline-block;
+    transform: rotate(90deg);
+    transition: transform 0.25s ease-out;
+}
+.collapsible input:checked ~ .arrow,
+.collapsible input:checked ~ .collapser .arrow {
+    transform: rotate(270deg);
+}
+.collapsible .collapsed {
+    font-size: 0;
+    margin: 0;
+    opacity: 0;
+    padding: 0;
+    transition: opacity 0.25s, margin 0.5s 0.25s, font-size 0.5s 0.25s, padding 0.5s 0.25s;
+}
+.collapsible input:checked ~ .collapsed {
+    font-size: 1.125em; /* Ensure same font size for expanded content */
+    opacity: 1;
+    height: auto;
+    padding: 5px 0;
+    transition: margin 0.25s, padding 0.25s, font-size 0.25s, opacity 0.5s 0.25s;
+}
+
+
+
+/* Contact Form Styles */
+#contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contact label {
+    font-size: 1.25em;
+    margin-bottom: 5px;
+}
+
+#contact input,
+#contact textarea,
+#contact select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.125em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#contact button {
+    padding: 10px 20px;
+    font-size: 1.125em;
+    color: #fff;
+    background-color: #744933;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#contact button:hover {
+    background-color: #5c3b2e;
+}
+
+/* General Elements */
 p {
     font-size: 1.125em; /* Font size for paragraphs */
 }
