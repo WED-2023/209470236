@@ -23,7 +23,7 @@ This project is a simple, static personal website. It contains multiple sections
 - **Q&A Section:** A collapsible section with common questions and answers.
 - **Contact Form:** A form for visitors to send messages.
 
-## To-pay-attention
+## To Pay Attention
 - **Fixed Header with Navigation:** The header remains fixed at the top of the page, providing easy navigation across different sections of the website.
 - **Responsive Design:** The layout adjusts to different screen sizes using CSS Flexbox, making the website accessible on various devices.
 - **Collapsible Q&A Section:** Utilizes checkboxes and CSS to create a collapsible Q&A section, enhancing user interaction and keeping the content organized.
