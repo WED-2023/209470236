@@ -6,7 +6,7 @@ This is a personal website project for Jacob Budo, featuring details about his l
 
 - [Project Overview](#project-overview)
 - [Features](#features)
-- [Installation](#installation)
+- [To pay attention](#To pay attention)
 - [File Structure](#file-structure)
 
 ## Project Overview
@@ -23,10 +23,20 @@ This project is a simple, static personal website. It contains multiple sections
 - **Q&A Section:** A collapsible section with common questions and answers.
 - **Contact Form:** A form for visitors to send messages.
 
+## To pay attention
+- **Fixed Header with Navigation:** The header remains fixed at the top of the page, providing easy navigation across different sections of the website.
+- **Responsive Design:** The layout adjusts to different screen sizes using CSS Flexbox, making the website accessible on various devices.
+- **Collapsible Q&A Section:** Utilizes checkboxes and CSS to create a collapsible Q&A section, enhancing user interaction and keeping the content organized.
+- **Embedded YouTube Videos:** Integrates YouTube videos directly within the playlist section, allowing users to watch videos without leaving the page.
+- **Interactive Like Section:** Includes a Facebook Like button, encouraging social media interaction.
+- **QR Code for Easy Sharing:** Displays a QR code that visitors can scan to share the website easily.
+- **Centered QR Code and Text:** Uses Flexbox to center the QR code image and accompanying text within the section.
+- **Dynamic Contact Form:** A simple contact form allowing visitors to send messages, including a dropdown for selecting an emoji.
+- **Custom Fonts and Styles:** Applies custom fonts and consistent styling throughout the website to enhance readability and user experience.
+
 ## File Structure
 
 - `index.html`: The main HTML file containing the structure of the website.
 - `style.css`: The CSS file containing the styles for the website.
 - `README.md`: The file you are currently reading.
-
 
