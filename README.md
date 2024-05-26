@@ -51,3 +51,15 @@ This project is a simple, static personal website. It contains multiple sections
 
 ## File Structure
 
+personal-website/
+├── index.html
+├── style.css
+└── README.md
+
+- `index.html`: The main HTML file containing the structure of the website.
+- `style.css`: The CSS file containing the styles for the website.
+- `README.md`: The file you are currently reading.
+
+## License
+
+This project is licensed under the MIT License. See the `LICENSE` file for more details.
