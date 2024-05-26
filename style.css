@@ -1,4 +1,6 @@
 /* CSS */
+
+/* General Styles */
 body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: 0;
@@ -81,6 +83,7 @@ footer {
     bottom: 0;
 }
 
+/* About Section */
 #about {
     text-align: center; /* Center the text */
 }
@@ -108,6 +111,7 @@ footer {
     transition: all 0.3s ease-in-out 0s;
 }
 
+/* Photos Section */
 .photo-row {
     display: flex;
     justify-content: center;
@@ -121,12 +125,14 @@ footer {
     border-radius: 5px;
 }
 
+/* Like Section */
 .like-image {
     display: block;
     margin: 0 auto; /* Center the image */
     max-width: 35%; /* Ensure the image does not exceed its maximum width */
 }
 
+/* Playlist Section */
 .video-row {
     display: flex;
     flex-wrap: wrap;
@@ -146,27 +152,93 @@ footer {
     border: none;
 }
 
-p {
-    font-size: 1.125em; /* Font size for paragraphs */
+/* QR Code Section */
+.text-image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
-label {
-    font-size: 1.125em; /* Font size for labels in forms */
+.text-image-container img {
+    max-width: 100%;
+    height: auto;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-size: 1.125em; /* Font size for all headings */
-    font-weight: normal; /* Optional: make all headings have normal weight */
+.text-image-container p {
+    margin-top: 10px;
+    font-size: 1.25em; /* Adjust as needed */
 }
 
-select {
-    font-size: 1.5em; /* Increase font size in the selection box */
-    padding: 5px; /* Add inner margin */
+/* Q&A Section */
+/***********Q&A***********/
+#qa h1 {
+    font-size: 2.5em; /* Font size for main headings */
+    position: relative;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    text-align: center; /* Center the heading */
 }
 
-option {
-    font-size: 1.5em; /* Increase font size in options */
+#qa h1::before {
+    content: "";
+    position: absolute;
+    width: 100%; /* Line width */
+    height: 5px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%); /* Center the line */
+    background-color: #a17639; /* Line color */
+    visibility: visible;
+    transition: all 0.3s ease-in-out 0s;
 }
+
+/* Ensure uniform font size in Q&A section */
+#qa .collapsible p,
+#qa .collapsible .collapsed p {
+    font-size: 1.125em; /* Set font size for paragraphs in Q&A */
+}
+
+.collapsible {
+    display: block;
+    margin-bottom: 1rem;
+}
+.collapsible input {
+    position: fixed;
+    left: -9999px;
+}
+.collapsible .collapser {
+    cursor: pointer;
+    border: 0px;
+}
+.collapsible .arrow {
+    float: right;
+    margin-inline: 0em;
+    display: inline-block;
+    transform: rotate(90deg);
+    transition: transform 0.25s ease-out;
+}
+.collapsible input:checked ~ .arrow,
+.collapsible input:checked ~ .collapser .arrow {
+    transform: rotate(270deg);
+}
+.collapsible .collapsed {
+    font-size: 0;
+    margin: 0;
+    opacity: 0;
+    padding: 0;
+    transition: opacity 0.25s, margin 0.5s 0.25s, font-size 0.5s 0.25s, padding 0.5s 0.25s;
+}
+.collapsible input:checked ~ .collapsed {
+    font-size: 1.125em; /* Ensure same font size for expanded content */
+    opacity: 1;
+    height: auto;
+    padding: 5px 0;
+    transition: margin 0.25s, padding 0.25s, font-size 0.25s, opacity 0.5s 0.25s;
+}
+
+
 
 /* Contact Form Styles */
 #contact form {
@@ -207,16 +279,28 @@ option {
     background-color: #5c3b2e;
 }
 
-/***********Q&A***********/
-#qa h1 {
+/* General Elements */
+p {
+    font-size: 1.125em; /* Font size for paragraphs */
+}
+
+label {
+    font-size: 1.125em; /* Font size for labels in forms */
+}
+
+h1 {
     font-size: 2.5em; /* Font size for main headings */
+}
+
+h2 {
+    font-size: 2em; /* Font size for subheadings */
     position: relative;
     margin-bottom: 20px;
     padding-bottom: 10px;
     text-align: center; /* Center the heading */
 }
 
-#qa h1::before {
+h2::before {
     content: "";
     position: absolute;
     width: 100%; /* Line width */
@@ -229,101 +313,19 @@ option {
     transition: all 0.3s ease-in-out 0s;
 }
 
-.collapsible p {
-    font-size: 1.125em; /* Font size for paragraphs */
+h3 {
+    font-size: 1.75em; /* Font size for tertiary headings */
 }
 
-.collapsible {
-    display: block;
-    margin-bottom: 1rem;
-}
-.collapsible input {
-    position: fixed;
-    left: -9999px;
-}
-.collapsible .collapser {
-    cursor: pointer;
-    border: 0px;
-}
-.collapsible .arrow {
-    float: right;
-    margin-inline: 0em;
-    display: inline-block;
-    transform: rotate(90deg);
-    transition: transform 0.25s ease-out;
-}
-.collapsible input:checked ~ .arrow,
-.collapsible input:checked ~ .collapser .arrow {
-    transform: rotate(270deg);
-}
-.collapsible .collapsed {
-    font-size: 0;
-    margin: 0;
-    opacity: 0;
-    padding: 0;
-    transition: opacity 0.25s, margin 0.5s 0.25s, font-size 0.5s 0.25s, padding 0.5s 0.25s;
-}
-.collapsible input:checked ~ .collapsed {
-    font-size: 16px;
-    opacity: 1;
-    height: auto;
-    padding: 5px 0;
-    transition: margin 0.25s, padding 0.25s, font-size 0.25s, opacity 0.5s 0.25s;
+h4, h5, h6 {
+    font-size: 1.5em; /* Font size for smaller headings */
 }
 
-/* Add these new styles at the end of the style.css file */
-.text-image-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+select {
+    font-size: 1.5em; /* Increase font size in the selection box */
+    padding: 5px; /* Add inner margin */
 }
 
-.text-image-container img {
-    max-width: 100%;
-    height: auto;
-}
-
-.text-image-container p {
-    margin-top: 10px;
-    font-size: 1.25em; /* Adjust as needed */
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        height: auto;
-    }
-
-    header .logo {
-        margin: 0 auto;
-        padding: 10px 0;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav ul li {
-        margin: 5px 0;
-    }
-
-    section {
-        padding: 10px;
-    }
-
-    .photo-row {
-        flex-direction: column;
-    }
-
-    .video-container {
-        max-width: 100%;
-    }
-
-    .like-image {
-        max-width: 100%;
-    }
+option {
+    font-size: 1.5em; /* Increase font size in options */
 }
