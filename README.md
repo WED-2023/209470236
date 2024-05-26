@@ -6,7 +6,7 @@ This is a personal website project for Jacob Budo, featuring details about his l
 
 - [Project Overview](#project-overview)
 - [Features](#features)
-- [To-pay-attention](#To-pay-attention)
+- [To Pay Attention](#To-pay-attention)
 - [File Structure](#file-structure)
 
 ## Project Overview
