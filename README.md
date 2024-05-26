@@ -1,6 +1,6 @@
-# Personal Website
+# Personal Website Of Yaakov Bodo
 
-This is a personal website project for Jacob Budo, featuring details about his life that includes several sections such as About Me, Photos, Playlist, QR Code, Q&A, and Contact Me. The website is created using HTML and CSS.
+This is a personal website project for Yaakov Bodo, featuring details about his life that includes several sections such as About Me, Photos, Playlist, QR Code, Q&A, and Contact Me. The website is created using HTML and CSS.
 
 ## Table of Contents
 
